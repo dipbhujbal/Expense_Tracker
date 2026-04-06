@@ -11,10 +11,10 @@ pipeline {
 
     environment {
         RENDER_API_KEY = credentials('render-api-key')
-        RENDER_BACKEND_SERVICE_ID = 'srv-cv2udl2j1k6c739pp0lg'
-        RENDER_BACKEND_DEPLOY_HOOK = "https://api.render.com/deploy/${RENDER_BACKEND_SERVICE_ID}?key=HH45VpzmZPA"
-        RENDER_FRONTEND_SERVICE_ID = 'srv-d02k9ajuibrs73avrthg'
-        RENDER_FRONTEND_DEPLOY_HOOK = "https://api.render.com/deploy/${RENDER_FRONTEND_SERVICE_ID}?key=TbPZe9yi_PI"
+        RENDER_BACKEND_SERVICE_ID = 'srv-d79m58hr0fns73eji25g'
+        RENDER_BACKEND_DEPLOY_HOOK = "https://api.render.com/deploy/${RENDER_BACKEND_SERVICE_ID}?key=qRI6ZsTbWKQ"
+        RENDER_FRONTEND_SERVICE_ID = 'srv-d79n0tfkijhs7390qqdg'
+        RENDER_FRONTEND_DEPLOY_HOOK = "https://api.render.com/deploy/${RENDER_FRONTEND_SERVICE_ID}?key=SnMt60hw0fw"
     }
 
     stages {
@@ -55,7 +55,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 dir('expense-tracker-service') {
-                    withSonarQubeEnv('sonarqube-25.4.0.105899') {
+                    withSonarQubeEnv('sonarqube-26.3.0.120487') {
                         sh 'mvn sonar:sonar'
                     }
                 }
