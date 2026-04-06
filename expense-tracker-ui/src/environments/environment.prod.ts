@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://expense-tracker-oqxn.onrender.com/api/v1/expense'
+  baseUrl: 'https://expense-tracker-nddw.onrender.com/'
 };
